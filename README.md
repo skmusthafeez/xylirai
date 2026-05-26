@@ -64,3 +64,18 @@ This project includes `netlify.toml` and Netlify Functions for:
 - `/api/chat`
 
 Set either `OPENAI_API_KEY` and `OPENAI_MODEL`, or `AI_PROVIDER=openrouter` with `OPENROUTER_API_KEY` and `OPENROUTER_MODEL`, in Netlify environment variables before deploying. Add `POLLINATIONS_API_KEY` for image, video, and audio generation.
+
+## Vercel
+
+This project also includes Vercel API functions under `/api`.
+
+In Vercel Project Settings > Environment Variables, set:
+
+```bash
+AI_PROVIDER=openrouter
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+OPENROUTER_MODEL=openai/gpt-4o-mini
+POLLINATIONS_API_KEY=your_pollinations_api_key_here
+```
+
+Then redeploy the project. Do not commit real API keys to GitHub.

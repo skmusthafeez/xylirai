@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "env": {
+    "AI_PROVIDER": "openrouter",
+    "OPENROUTER_MODEL": "openai/gpt-4o-mini"
+  },
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
