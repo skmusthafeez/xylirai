@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xylir 2.0</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Conversations">
+        <div class="sidebar-top">
+          <button class="brand-button" id="newChatButton" type="button">
+            <span class="brand-mark">X</span>
+            <span>xylir 2.0</span>
+            <i data-lucide="plus" data-fallback="+" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="history-tools">
+          <label class="search-shell">
+            <i data-lucide="search" data-fallback="?" aria-hidden="true"></i>
+            <input id="searchInput" type="search" placeholder="Search chats" />
+          </label>
+        </div>
+
+        <nav class="history-list" id="historyList" aria-label="Chat history"></nav>
+
+        <div class="sidebar-footer">
+          <button class="ghost-button" id="clearButton" type="button">
+            <i data-lucide="trash-2" data-fallback="x" aria-hidden="true"></i>
+            <span>Clear</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <button
+            class="icon-button mobile-only"
+            id="menuButton"
+            type="button"
+            aria-label="Open conversations"
+            title="Conversations"
+          >
+            <i data-lucide="panel-left" data-fallback="=" aria-hidden="true"></i>
+          </button>
+          <div class="conversation-heading">
+            <span class="eyebrow">xylir 2.0</span>
+            <h1 id="chatTitle">New chat</h1>
+          </div>
+          <div class="status-pill" id="statusPill">
+            <span class="status-dot"></span>
+            <span id="statusText">Checking</span>
+          </div>
+        </header>
+
+        <section class="messages" id="messages" aria-live="polite"></section>
+
+        <form class="composer" id="chatForm">
+          <div class="composer-inner">
+            <div class="attachment-strip" id="attachmentStrip" hidden></div>
+            <div class="mode-tabs" id="modeTabs" aria-label="Prompt mode">
+              <button type="button" class="active" data-mode="all">Chat</button>
+              <button type="button" data-mode="image">Image</button>
+              <button type="button" data-mode="video">Video</button>
+              <button type="button" data-mode="audio">Audio</button>
+              <button type="button" data-mode="music">Music</button>
+            </div>
+            <div class="composer-row">
+              <label class="attach-button" for="fileInput" title="Attach files">
+                <i data-lucide="paperclip" data-fallback="+" aria-hidden="true"></i>
+                <span class="sr-only">Attach files</span>
+              </label>
+              <input
+                class="file-input"
+                id="fileInput"
+                type="file"
+                multiple
+                accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,text/plain,text/markdown,text/csv,text/html,text/css,text/javascript,application/javascript,application/json,application/xml,text/xml,.txt,.md,.csv,.json,.pdf,.js,.ts,.jsx,.tsx,.html,.css,.xml,.yaml,.yml,.log,.py,.java,.c,.cpp,.cs,.go,.rs,.php,.rb,.sql"
+              />
+              <textarea
+                id="messageInput"
+                rows="1"
+                placeholder="Message xylir 2.0 or attach files/images"
+                autocomplete="off"
+              ></textarea>
+              <button
+                class="send-button"
+                id="sendButton"
+                type="submit"
+                aria-label="Send message"
+                title="Send"
+              >
+                <i data-lucide="arrow-up" data-fallback="^" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="composer-notice" id="composerNotice" aria-live="polite"></div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
