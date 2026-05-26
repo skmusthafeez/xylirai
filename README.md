@@ -7,7 +7,8 @@ A ChatGPT-style AI chatbot with a distinct lime/cyan theme, local chat history, 
 1. Create `.env` from `.env.example` and add your API key:
 
    ```bash
-   OPENAI_API_KEY=your_openai_api_key_here
+   OPENAI_API_KEY=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
+
    OPENAI_MODEL=gpt-5.4-mini
    ```
 
@@ -15,7 +16,8 @@ A ChatGPT-style AI chatbot with a distinct lime/cyan theme, local chat history, 
 
    ```bash
    AI_PROVIDER=openrouter
-   OPENROUTER_API_KEY=your_openrouter_api_key_here
+   OPENROUTER_API_KEY=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
+
    OPENROUTER_MODEL=openai/gpt-4o-mini
    ```
 
